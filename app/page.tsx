@@ -1,7 +1,16 @@
+import { Suspense } from 'react';
+import Footer from 'components/layout/footer';
+import { ThreeItemGrid } from 'components/grid/three-items';
+
+export const runtime = 'edge';
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Yuri in the Sky
-    </main>
+    <>
+      <ThreeItemGrid />
+      <Suspense>
+        <Footer />
+      </Suspense>
+    </>
   );
 }
